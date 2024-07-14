@@ -1,0 +1,85 @@
+[{
+  "users": [
+    {
+      "id": 1,
+      "name": "darshil",
+      "email": "darshil@gmail.com",
+      "password": "112211",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Bhautik",
+      "email": "Bhautik@gmail.com",
+      "password": "112211",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "name": "Sahil",
+      "email": "Sahil@gmail.com",
+      "password": "2222",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Khushi",
+      "email": "Khushi@gmail.com",
+      "password": "3333",
+      "role": "admin"
+    }
+  ]
+},
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "restaurant-name": "Ishkon Thad",
+      "rating": 4,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["gujrati", "punjabi", "south"]
+    },
+    {
+      "id": 2,
+      "restaurant-name": "Green Apple",
+      "rating": 3,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["gujrati", "Chinise", "south"]
+    },
+    {
+      "id": 3,
+      "restaurant-name": "Rajwadi bhojnalay",
+      "rating": 3,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["gujrati"]
+    },
+    {
+      "id": 4,
+      "restaurant-name": "Mcdonald's",
+      "rating": 2,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["FastFood"]
+    },
+    {
+      "id": 5,
+      "restaurant-name": "Honest",
+      "rating": 4,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["gujrati", "punjabi", "south"]
+    },
+    {
+      "id": 6,
+      "restaurant-name": "Honest",
+      "rating": 4,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "categories": ["gujrati", "punjabi", "south"]
+    }
+  ]
+}
+]

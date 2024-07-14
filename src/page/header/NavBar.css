@@ -1,0 +1,63 @@
+.NavBar-Main {
+  background: rgb(7, 0, 3);
+  background: linear-gradient(
+    135deg,
+    rgba(7, 0, 3, 1) 46%,
+    rgba(16, 16, 22, 1) 56%,
+    rgba(57, 70, 63, 1) 81%
+  );
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  height: 10vh;
+  padding: 20px;
+}
+.NavBar-Main-left {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  width: 30%;
+  font-size: 20px;
+}
+.NavBar-Main-center {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  color: white;
+}
+
+.NavBar-Main-center-NavLink {
+  text-decoration: none;
+  color: white;
+
+}
+.active {
+  color: #ffbe33;
+}
+
+.inactive {
+  color: white;
+}
+
+.NavBar-Main-center-NavLink:hover{
+    text-decoration: none;
+    color: #ffbe33;
+}
+.NavBar-Main-center-NavLink-Button{
+    padding: 10px 50px;
+    border: 1px solid #ffbe33;
+    border-radius: 1.5rem;
+    background-color: #ffbe33;
+    color:#ffffff ;
+}
+.NavBar-Main-Right {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
+}
