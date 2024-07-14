@@ -3,53 +3,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
 import Loginbackground from "../../asset/Image/background.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { FETCH_USER_DATA } from "../../store/type/Type";
 import Input from "../../component/Input";
 import { useNavigate } from "react-router-dom";
-// import Button from '../component/Button'
-
+import { loginRequest } from "../../store/loginUserData/Action";
 
 const Login = () => {
   const dispatch = useDispatch();
-
-  const Users = useSelector((state) => state.userReducerData.Users);
-  console.log("state.userReducerData.Users", Users);
   const Navigate = useNavigate();
-  const [UserLogin, setUserLogin] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { loading, error } = useSelector((state) => state.userReducerData);
 
-  useEffect(() => {
-    dispatch({ type: FETCH_USER_DATA });
-  }, []);
-
-  const CheckUserData = () => {
-    const USerCheck = Users.find(
-      (user) =>(user.email === UserLogin.email && user.password === UserLogin.password)
-      );
-      if (USerCheck) {
-        const boat = btoa(USerCheck.email + USerCheck.password);
-        const token = {
-          boat,
-          createdAt: new Date().getTime(),
-        };
-        localStorage.setItem('token', JSON.stringify(token));
-        Navigate("/Home");
-        console.log("Login is Succssefull",JSON.stringify(token));
-    } else {
-      console.log("Invalid User");
-    }
-  };
-
-  const HandelSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    CheckUserData();
+    dispatch(loginRequest({ email, password }));
+    const token = {
+      value: btoa(`${email}:${password}`),
+      createdAt: new Date().getTime(),
+    };
+    localStorage.setItem("jwtToken", JSON.stringify(token));
+    Navigate("/Home");
   };
-
-  const HandelChange = (e) => {
-    setUserLogin({ ...UserLogin, [e.target.name]: e.target.value });
-  };
+  // const users = useSelector((state) => state.userReducerData.users);
+  // console.log("state.userReducerData.Users", users);
   return (
     <div>
       <img src={Loginbackground} className="Loginbackground" alt="image" />
@@ -72,62 +48,45 @@ const Login = () => {
                 </div>
               </div>
               <div className="card-body">
-                <form onSubmit={HandelSubmit}>
-                  <div className="input-group form-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-user"></i>
-                      </span>
-                    </div>
-                    <Input
-                      type="text"
-                      className="form-control"
-                      placeholder="Email"
-                      name="email"
-                      value={UserLogin.email}
-                      onChange={HandelChange}
-                    />
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-user"></i>
+                    </span>
                   </div>
-                  <div className="input-group form-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <i className="fas fa-key"></i>
-                      </span>
-                    </div>
-                    <Input
-                      type="password"
-                      className="form-control"
-                      placeholder="password"
-                      name="password"
-                      value={UserLogin.password}
-                      onChange={HandelChange}
-                    />
-                  </div>
-                  <div className="row align-items-center remember">
-                    <input type="checkbox" />
-                    Remember Me
-                  </div>
-                  <div className="form-group">
-                    <Input
-                      type="submit"
-                      className="btn float-right login_btn"
-                      value="Login"
-                    />
-                    {/* <input
-                      type="submit"
-                      value="Login"
-                      className="btn float-right login_btn"
-                    /> */}
-                 
-                  </div>
-                </form>
-              </div>
-              <div className="card-footer">
-                <div className="d-flex justify-content-center links">
-                  Don't have an account?<a href="#">Sign Up</a>
+                  {error && <p style={{ color: "red" }}>{error}</p>}
+                  <Input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
-                <div className="d-flex justify-content-center">
-                  <a href="#">Forgot your password?</a>
+                <div className="input-group form-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">
+                      <i className="fas fa-key"></i>
+                    </span>
+                  </div>
+                  <Input
+                    type="password"
+                    className="form-control"
+                    placeholder="password"
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <div className="row align-items-center remember">
+                  <input type="checkbox" />
+                  Remember Me
+                </div>
+                <div className="form-group">
+                  <button onClick={handleLogin} disabled={loading}>
+                    {loading ? "Logging in..." : "Login"}
+                  </button>
                 </div>
               </div>
             </div>
@@ -138,4 +97,3 @@ const Login = () => {
   );
 };
 export default Login;
-/* Made with love by Mutiullah Samim*/
