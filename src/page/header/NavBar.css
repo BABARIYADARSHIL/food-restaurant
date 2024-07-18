@@ -48,16 +48,19 @@
     color: #ffbe33;
 }
 .NavBar-Main-center-NavLink-Button{
-    padding: 10px 50px;
-    border: 1px solid #ffbe33;
+    padding: 10px 40px;
     border-radius: 1.5rem;
     background-color: #ffbe33;
     color:#ffffff ;
 }
 .NavBar-Main-Right {
-  width: 30%;
+  /* height: 7vh; */
+  width: 30%;  
+  color: white;
+}
+.NavBar-Main-Right-Main{
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  color: white;
   align-items: center;
 }

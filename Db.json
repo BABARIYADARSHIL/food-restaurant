@@ -39,46 +39,64 @@
         "rating": 4,
         "foodType": "Veg",
         "location": "Ahmedabad",
-        "categories": ["gujrati", "punjabi", "south"]
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPI6NkGfWF2n2Zog2Q9c-6eWwsEgF3vhNWQ&s",
+        "categories": ["gujrati", "punjabi", "south"],
+        "items": [
+          { "name": "Roti", "price": 10 },
+          { "name": "Sabji", "price": 50 }
+        ]
       },
       {
         "id": 2,
         "restaurantName": "Green Apple",
         "rating": 3,
         "foodType": "Veg",
-        "location": "Ahmedabad",
-        "categories": ["gujrati", "Chinise", "south"]
+        "location": "Green Apple",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/12/47/73/4e/exterior.jpg",
+        "categories": ["gujrati", "Chinise", "south"],
+        "items": [
+          { "name": "Fried Rice", "price": 150 },
+          { "name": "Noodles", "price": 100 }
+        ]
       },
       {
         "id": 3,
         "restaurantName": "Rajwadi bhojnalay",
-        "rating": 3,
+        "rating": 2,
         "foodType": "Veg",
         "location": "Ahmedabad",
-        "categories": ["gujrati"]
+        "image": "https://img.restaurantguru.com/w550/h367/r793-Rajwadi-Bhojanalaya-Gujarati-Thali-Punjabi-Thali-food.jpg",
+        "categories": ["gujrati"],
+        "items": [
+          { "name": "Roti", "price": 10 },
+          { "name": "Sabji", "price": 50 }
+        ]
       },
       {
         "id": 4,
         "restaurantName": "Mcdonald's",
-        "rating": 2,
-        "foodType": "Veg",
+        "rating": 5,
+        "foodType": "No-Veg",
         "location": "Ahmedabad",
+        "image": "https://content.jdmagicbox.com/comp/ahmedabad/z7/079pxx79.xx79.220603221418.z5z7/catalogue/mccafe-by-mcdonalds-sola-road-ahmedabad-desserts-fcu9wqr72e.jpg",
         "categories": ["FastFood"]
       },
       {
         "id": 5,
         "restaurantName": "Honest",
-        "rating": 4,
-        "foodType": "Veg",
+        "rating": 1,
+        "foodType": "No-Veg",
         "location": "Ahmedabad",
+        "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
         "categories": ["gujrati", "punjabi", "south"]
       },
       {
         "id": 6,
         "restaurantName": "Honest",
-        "rating": 4,
-        "foodType": "Veg",
+        "rating": 2,
+        "foodType": "No-Veg",
         "location": "Ahmedabad",
+        "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
         "categories": ["gujrati", "punjabi", "south"]
       }
     ]

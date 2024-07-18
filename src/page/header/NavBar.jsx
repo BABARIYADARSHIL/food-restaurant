@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import Button from "../../component/Button";
+import Cart from "../../component/cart/Cart";
+// import { useAccordionButton } from "react-bootstrap";
 
 const NavBar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handelLogout = () => {
+    localStorage.removeItem("jwtToken");
+    setIsLoggedIn(false);
+  };
   return (
     <>
       <div className="NavBar-Main">
@@ -46,18 +61,36 @@ const NavBar = () => {
         </div>
         <div className="NavBar-Main-Right">
           <div>
-            <NavLink className="NavBar-Main-center-NavLink" to="/">
-              <Button
-                className="NavBar-Main-center-NavLink-Button"
-                label="Login"
-              />
-            </NavLink>
+            {isLoggedIn ? (
+              <div className="NavBar-Main-Right-Main">
+                <div>
+                  <NavLink className="NavBar-Main-center-NavLink" to="/">
+                    <Button
+                      className="NavBar-Main-center-NavLink-Button"
+                      onClick={handelLogout}
+                      label="Logout"
+                    />
+                  </NavLink>
+                </div>
+                <div>
+                  <NavLink className="NavBar-Main-center-NavLink" to="/Cart">
+                    Cart
+                  </NavLink>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <NavLink className="NavBar-Main-center-NavLink" to="/">
+                  Login
+                </NavLink>
+              </div>
+            )}
           </div>
-          <div>
+          {/* <div>
             <NavLink className="NavBar-Main-center-NavLink" to="/Oder">
               profile
             </NavLink>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -1,9 +1,5 @@
 
-import {
-  FETCH_USER_DATA,
-  FETCH_USER_DATA_FAILED,
-  FETCH_USER_DATA_SUCCESS,
-} from "../type/Type";
+import { FETCH_USER_DATA, FETCH_USER_DATA_FAILED, FETCH_USER_DATA_SUCCESS } from "../type/Type";
 
 export const loginRequest = (credentials) => ({
   type: FETCH_USER_DATA,

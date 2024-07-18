@@ -12,20 +12,21 @@ const Login = () => {
   const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { loading, error } = useSelector((state) => state.userReducerData);
+  const { loading, error, isAuthenticated } = useSelector(
+    (state) => state.userReducerData
+  );
 
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(loginRequest({ email, password }));
-    const token = {
-      value: btoa(`${email}:${password}`),
-      createdAt: new Date().getTime(),
-    };
-    localStorage.setItem("jwtToken", JSON.stringify(token));
-    Navigate("/Home");
   };
-  // const users = useSelector((state) => state.userReducerData.users);
-  // console.log("state.userReducerData.Users", users);
+  useEffect(() => {
+    if (isAuthenticated) {
+      Navigate("/Home");
+    }
+  }, [isAuthenticated, Navigate]);
+
+
   return (
     <div>
       <img src={Loginbackground} className="Loginbackground" alt="image" />
@@ -54,7 +55,7 @@ const Login = () => {
                       <i className="fas fa-user"></i>
                     </span>
                   </div>
-                  {error && <p style={{ color: "red" }}>{error}</p>}
+
                   <Input
                     type="text"
                     className="form-control"
@@ -79,6 +80,7 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
+                {error && <p style={{ color: "red" }}>{error}</p>}
                 <div className="row align-items-center remember">
                   <input type="checkbox" />
                   Remember Me
@@ -97,3 +99,4 @@ const Login = () => {
   );
 };
 export default Login;
+

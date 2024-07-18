@@ -9,18 +9,18 @@ export function* fetchUserData(action) {
     const { email, password } = action.payload;
     const response = yield call(UsersData);
     const users = response.data.users;
-    console.log("----->", users);
+    // console.log("----->", users);
 
     const user = users.find(
       (user) => user.email === email && user.password === password
     );
     if (user) {
-      //   const token = {
-      //     value: btoa(`${user.email}:${user.password}`), // simple base64 encoding as a mock token
-      //     createdAt: new Date().getTime(), // add createdAt timestamp
-      //   };
-      //      console.log("======>", token);
-      //   localStorage.setItem("jwtToken", JSON.stringify(token));
+      const token = {
+        value: btoa(`${user.email}:${user.password}`),
+        createdAt: new Date().getTime(),
+      };
+      // console.log("======>", token);
+      localStorage.setItem("jwtToken", JSON.stringify(token));
       yield put(loginSuccess(user));
     } else {
       yield put(loginFailure("Invalid email or password"));

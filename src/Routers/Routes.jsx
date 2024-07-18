@@ -6,7 +6,11 @@ import NavBar from "../page/header/NavBar";
 import PrivateRouter from "./PrivateRouter";
 import PublicRouter from "./PublicRouter";
 import About from "../page/about";
-import Menu from "../page/menu";
+import Menu from "../page/menu/index";
+import Home1 from "../page/home/Home1";
+import Restaurant from "../page/restaurant/Restaurant";
+import Cart from "../component/cart/Cart";
+import ConfirmOrder from "../component/cart/ConfirmOrder";
 const Routers = () => {
   return (
     <div>
@@ -21,6 +25,9 @@ const Routers = () => {
             <Route path="/Home" element={<Home />} />
             <Route path="/About" element={<About />} />
             <Route path="/Menu" element={<Menu />} />
+            <Route path="/restaurant/:id" element={<Restaurant />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/confirm" element={<ConfirmOrder />} />
           </Route>
         </Routes>
       </BrowserRouter>

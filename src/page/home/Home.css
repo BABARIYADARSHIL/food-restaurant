@@ -1,17 +1,55 @@
-.Main-Home {
+.Main-Home-MAin {
   background-image: url(../../asset/Image/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+  border: 1px solid red;
   width: 100%;
-  top: 0;
-  left: 0;
+  color: white;
+}
+/* .Main-Home-MAin-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
+  /* padding: 40px;
+  width:100vh;
+  border: 1px solid red; */
+/* } */ 
+
+/* .Main-Home-MAin-images{
+  display: flex;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+} */
+.Main-Home{
+ background: rgb(7, 0, 3);
+  background: linear-gradient(
+    135deg,
+    rgba(7, 0, 3, 1) 46%,
+    rgba(16, 16, 22, 1) 56%,
+    rgba(57, 70, 63, 1) 81%
+  );
+  height: auto;
+}
+.card-cards{
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
 }
 .Main-Home-image {
-  padding: 10px;
-  width: 280px;
-  height: 160px;
+  /* border: 1px solid red; */
+  background-size: cover;
+  height: 130px;
+
+}
+.Main-Home-image-img{
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .Main-Home-center {
   display: flex;
@@ -39,16 +77,18 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  /* flex: 1 1 calc(33.33% - 30px); */
 }
 .Main-Home-Rigth {
-  border: 1px solid red;
-  padding: 50px;
+  /* border: 1px solid red; */
+  padding: 80px;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
   gap: 7rem;
-  /* overflow: auto; */
+  overflow: auto;
+}
+.star-rating {
+  color: gold;
 }
