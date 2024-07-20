@@ -1,104 +1,117 @@
-[
-  {
-    "users": [
-      {
-        "id": 1,
-        "name": "darshil",
-        "email": "darshil@gmail.com",
-        "password": "112211",
-        "role": "admin"
-      },
-      {
-        "id": 2,
-        "name": "Bhautik",
-        "email": "Bhautik@gmail.com",
-        "password": "112211",
-        "role": "admin"
-      },
-      {
-        "id": 3,
-        "name": "Sahil",
-        "email": "Sahil@gmail.com",
-        "password": "2222",
-        "role": "admin"
-      },
-      {
-        "id": 4,
-        "name": "Khushi",
-        "email": "Khushi@gmail.com",
-        "password": "3333",
-        "role": "admin"
-      }
-    ]
-  },
-  {
-    "restaurant": [
-      {
-        "id": 1,
-        "restaurantName": "Ishkon Thad",
-        "rating": 4,
-        "foodType": "Veg",
-        "location": "Ahmedabad",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPI6NkGfWF2n2Zog2Q9c-6eWwsEgF3vhNWQ&s",
-        "categories": ["gujrati", "punjabi", "south"],
-        "items": [
-          { "name": "Roti", "price": 10 },
-          { "name": "Sabji", "price": 50 }
-        ]
-      },
-      {
-        "id": 2,
-        "restaurantName": "Green Apple",
-        "rating": 3,
-        "foodType": "Veg",
-        "location": "Green Apple",
-        "image": "https://media-cdn.tripadvisor.com/media/photo-s/12/47/73/4e/exterior.jpg",
-        "categories": ["gujrati", "Chinise", "south"],
-        "items": [
-          { "name": "Fried Rice", "price": 150 },
-          { "name": "Noodles", "price": 100 }
-        ]
-      },
-      {
-        "id": 3,
-        "restaurantName": "Rajwadi bhojnalay",
-        "rating": 2,
-        "foodType": "Veg",
-        "location": "Ahmedabad",
-        "image": "https://img.restaurantguru.com/w550/h367/r793-Rajwadi-Bhojanalaya-Gujarati-Thali-Punjabi-Thali-food.jpg",
-        "categories": ["gujrati"],
-        "items": [
-          { "name": "Roti", "price": 10 },
-          { "name": "Sabji", "price": 50 }
-        ]
-      },
-      {
-        "id": 4,
-        "restaurantName": "Mcdonald's",
-        "rating": 5,
-        "foodType": "No-Veg",
-        "location": "Ahmedabad",
-        "image": "https://content.jdmagicbox.com/comp/ahmedabad/z7/079pxx79.xx79.220603221418.z5z7/catalogue/mccafe-by-mcdonalds-sola-road-ahmedabad-desserts-fcu9wqr72e.jpg",
-        "categories": ["FastFood"]
-      },
-      {
-        "id": 5,
-        "restaurantName": "Honest",
-        "rating": 1,
-        "foodType": "No-Veg",
-        "location": "Ahmedabad",
-        "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
-        "categories": ["gujrati", "punjabi", "south"]
-      },
-      {
-        "id": 6,
-        "restaurantName": "Honest",
-        "rating": 2,
-        "foodType": "No-Veg",
-        "location": "Ahmedabad",
-        "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
-        "categories": ["gujrati", "punjabi", "south"]
-      }
-    ]
-  }
+[{
+  "users": [
+    {
+      "id": 1,
+      "name": "darshil",
+      "email": "darshil@gmail.com",
+      "password": "112211",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Bhautik",
+      "email": "Bhautik@gmail.com",
+      "password": "112211",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "name": "Sahil",
+      "email": "Sahil@gmail.com",
+      "password": "2222",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Khushi",
+      "email": "Khushi@gmail.com",
+      "password": "3333",
+      "role": "admin"
+    }
+  ]
+},
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "restaurantName": "Ishkon Thad",
+      "rating": 4,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPI6NkGfWF2n2Zog2Q9c-6eWwsEgF3vhNWQ&s",
+      "categories": ["gujrati", "punjabi", "south"],
+      "items": [
+        { "name": "Roti", "price": 10, "categories": ["gujrati"] },
+        { "name": "Sabji", "price": 50, "categories": ["gujrati"] }
+      ]
+    },
+    {
+      "id": 2,
+      "restaurantName": "Green Apple",
+      "rating": 3,
+      "foodType": "Veg",
+      "location": "Green Apple",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/12/47/73/4e/exterior.jpg",
+      "categories": ["gujrati", "Chinise", "south"],
+      "items": [
+        { "name": "Fried Rice", "price": 150, "categories": ["Chinise"] },
+        { "name": "Noodles", "price": 100, "categories": ["Chinise"] }
+      ]
+    },
+    {
+      "id": 3,
+      "restaurantName": "Rajwadi bhojnalay",
+      "rating": 2,
+      "foodType": "Veg",
+      "location": "Ahmedabad",
+      "image": "https://img.restaurantguru.com/w550/h367/r793-Rajwadi-Bhojanalaya-Gujarati-Thali-Punjabi-Thali-food.jpg",
+      "categories": ["gujrati"],
+      "items": [
+        { "name": "Roti", "price": 10, "categories": ["gujrati"] },
+        { "name": "Sabji", "price": 50, "categories": ["gujrati"] }
+      ]
+    },
+    {
+      "id": 4,
+      "restaurantName": "Mcdonald's",
+      "rating": 5,
+      "foodType": "No-Veg",
+      "location": "Ahmedabad",
+      "image": "https://content.jdmagicbox.com/comp/ahmedabad/z7/079pxx79.xx79.220603221418.z5z7/catalogue/mccafe-by-mcdonalds-sola-road-ahmedabad-desserts-fcu9wqr72e.jpg",
+      "categories": ["FastFood"],
+      "items": [
+        { "name": "Cheeseburger", "price": 100, "categories": ["FastFood"] },
+        { "name": "Fries", "price": 50, "categories": ["FastFood"] },
+        { "name": "McNuggets", "price": 120, "categories": ["FastFood"] }
+      ]
+    },
+    {
+      "id": 5,
+      "restaurantName": "Honest",
+      "rating": 1,
+      "foodType": "No-Veg",
+      "location": "Ahmedabad",
+      "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
+      "categories": ["gujrati", "punjabi", "south"],
+      "items": [
+        { "name": "Punjabi Thali", "price": 250, "categories": ["punjabi"] },
+        { "name": "Butter Chicken", "price": 200, "categories": ["punjabi"] }
+      ]
+    },
+    {
+      "id": 6,
+      "restaurantName": "Honest",
+      "rating": 2,
+      "foodType": "No-Veg",
+      "location": "Ahmedabad",
+      "image": "https://content.jdmagicbox.com/comp/ahmedabad/l8/079pxx79.xx79.150706102455.g3l8/catalogue/honest-restaurant-sardar-nagar-ahmedabad-punjabi-restaurants-12hmgdd.jpg",
+      "categories": ["gujrati", "punjabi", "south"],
+      "items": [
+        { "name": "Gujarati Thali", "price": 230, "categories": ["gujrati"] },
+        { "name": "Dosa", "price": 80, "categories": ["south"] }
+      ]
+    }
+  ]
+}
+
 ]

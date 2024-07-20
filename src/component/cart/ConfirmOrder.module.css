@@ -1,0 +1,46 @@
+.confirmOrderContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.confirmOrderTitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.orderList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.orderItem {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderItem span {
+  font-size: 1em;
+  color: #555;
+}
+
+.totalItems,
+.totalPrice {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 10px;
+  color: #333;
+}

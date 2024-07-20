@@ -5,12 +5,12 @@ import Home from "../page/home/index";
 import NavBar from "../page/header/NavBar";
 import PrivateRouter from "./PrivateRouter";
 import PublicRouter from "./PublicRouter";
-import About from "../page/about";
+import About from "../page/About/index";
 import Menu from "../page/menu/index";
-import Home1 from "../page/home/Home1";
 import Restaurant from "../page/restaurant/Restaurant";
 import Cart from "../component/cart/Cart";
 import ConfirmOrder from "../component/cart/ConfirmOrder";
+
 const Routers = () => {
   return (
     <div>
@@ -24,6 +24,7 @@ const Routers = () => {
           <Route element={<PrivateRouter />}>
             <Route path="/Home" element={<Home />} />
             <Route path="/About" element={<About />} />
+            {/* <Route path="/slider" element={<slider />} /> */}
             <Route path="/Menu" element={<Menu />} />
             <Route path="/restaurant/:id" element={<Restaurant />} />
             <Route path="/Cart" element={<Cart />} />

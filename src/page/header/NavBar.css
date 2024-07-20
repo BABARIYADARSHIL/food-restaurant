@@ -1,66 +1,141 @@
+/* General Styles */
 .NavBar-Main {
-  background: rgb(7, 0, 3);
-  background: linear-gradient(
-    135deg,
-    rgba(7, 0, 3, 1) 46%,
-    rgba(16, 16, 22, 1) 56%,
-    rgba(57, 70, 63, 1) 81%
-  );
+  background-color: #ffbe33; /* Amber background color */
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: white;
   height: 10vh;
-  padding: 20px;
+  padding: 0 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .NavBar-Main-left {
-  display: flex;
-  justify-content: center;
   font-family: "Dancing Script", cursive;
+  font-size: 2em;
   width: 30%;
-  font-size: 20px;
 }
+
 .NavBar-Main-center {
   display: flex;
   width: 40%;
   flex-direction: row;
   justify-content: center;
-  gap: 3rem;
-  color: white;
+  gap: 2rem;
+  transition: max-height 0.3s ease-out;
+}
+
+.NavBar-Main-center > div {
+  text-align: center;
 }
 
 .NavBar-Main-center-NavLink {
   text-decoration: none;
   color: white;
-
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
+
+.NavBar-Main-center-NavLink:hover {
+  color: #333; /* Dark text color on hover */
+  background-color: #ffd966; /* Slightly lighter amber on hover */
+  transform: scale(1.05);
+}
+
 .active {
-  color: #ffbe33;
+  color: #333;
+  background-color: #ffd966;
+  font-weight: bold;
 }
 
-.inactive {
-  color: white;
-}
-
-.NavBar-Main-center-NavLink:hover{
-    text-decoration: none;
-    color: #ffbe33;
-}
-.NavBar-Main-center-NavLink-Button{
-    padding: 10px 40px;
-    border-radius: 1.5rem;
-    background-color: #ffbe33;
-    color:#ffffff ;
-}
 .NavBar-Main-Right {
-  /* height: 7vh; */
-  width: 30%;  
-  color: white;
-}
-.NavBar-Main-Right-Main{
-  width: 100%;
+  width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.NavBar-Main-Right-Main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.NavBar-Main-center-NavLink-Button {
+  padding: 10px 20px;
+  border-radius: 1.5rem;
+  background-color: #333; /* Dark background color for buttons */
+  color: #ffbe33; /* Amber text color */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.NavBar-Main-center-NavLink-Button:hover {
+  background-color: #555; /* Darker background on hover */
+  color: #ffbe33; /* Amber text color on hover */
+  transform: scale(1.05);
+}
+
+/* Toggler Styles */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .NavBar-Main {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .NavBar-Main-left,
+  .NavBar-Main-center,
+  .NavBar-Main-Right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .NavBar-Main-center {
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .NavBar-Main-center.open {
+    display: flex;
+  }
+
+  .NavBar-Main-center-NavLink {
+    font-size: 1em;
+  }
+
+  .navbar-toggler {
+    display: flex;
+    margin-left: auto;
+  }
 }

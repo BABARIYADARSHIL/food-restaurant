@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Restaurant } from "./Api";
 
-export function RestaurantData(){
-    return axios.get(Restaurant);
+export async function  RestaurantData(){
+    return await axios.get(Restaurant);
 }

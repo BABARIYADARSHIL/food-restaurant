@@ -1,0 +1,68 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.itemContainer:hover {
+  transform: scale(1.02);
+}
+
+.itemName {
+  flex: 1;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.itemPrice {
+  flex: 1;
+  text-align: right;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+}
+
+.quantityButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.quantityButton:hover {
+  background-color: #0056b3;
+}
+
+.addToCartButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.addToCartButton:hover {
+  background-color: #218838;
+}
+
+.quantityDisplay {
+  padding: 0 10px;
+  font-size: 1em;
+  color: #333;
+}

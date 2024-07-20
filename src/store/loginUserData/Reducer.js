@@ -5,11 +5,12 @@ const initialState = {
   loading: false,
   error: null,
   isAuthenticated: false,
+  token: null
 };
 
 const UserReducer = (state = initialState, action) =>{
-    // console.log("......state",state);
-    // console.log("....actions",action);
+    // console.log("......---state",state);
+    // console.log("....----actions",action);
     switch(action.type){
         case FETCH_USER_DATA:
             return{
@@ -25,6 +26,7 @@ const UserReducer = (state = initialState, action) =>{
               users: action.payload,
               isAuthenticated: true,
               error: null,
+              token:action.payload.token.value
             };
         case FETCH_USER_DATA_FAILED:
             return {

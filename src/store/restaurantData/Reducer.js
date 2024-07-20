@@ -15,8 +15,8 @@ const initialState = {
 };
 
 const restaurantReducer = (state = initialState, action) => {
-  console.log("restaurantReducer-state", state);
-  console.log("restaurantReducer-actions", action);
+  // console.log("restaurantReducer-state", state);
+  // console.log("restaurantReducer-actions", action);
   switch (action.type) {
     case FETCH_RESTAURANT_DATA:
       return {

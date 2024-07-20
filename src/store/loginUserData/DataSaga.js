@@ -2,14 +2,12 @@ import { call, put, takeEvery } from "redux-saga/effects";
 import { UsersData } from "../../api/UserData";
 import { loginFailure, loginSuccess } from "./Action";
 import { FETCH_USER_DATA } from "../type/Type";
-import axios from "axios";
 
 export function* fetchUserData(action) {
   try {
     const { email, password } = action.payload;
     const response = yield call(UsersData);
     const users = response.data.users;
-    // console.log("----->", users);
 
     const user = users.find(
       (user) => user.email === email && user.password === password
@@ -19,9 +17,8 @@ export function* fetchUserData(action) {
         value: btoa(`${user.email}:${user.password}`),
         createdAt: new Date().getTime(),
       };
-      // console.log("======>", token);
       localStorage.setItem("jwtToken", JSON.stringify(token));
-      yield put(loginSuccess(user));
+      yield put(loginSuccess({ user, token }));
     } else {
       yield put(loginFailure("Invalid email or password"));
     }

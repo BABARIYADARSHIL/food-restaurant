@@ -1,94 +1,171 @@
 .Main-Home-MAin {
-  background-image: url(../../asset/Image/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
-  border: 1px solid red;
+  height: 75vh;
   width: 100%;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
 }
-/* .Main-Home-MAin-1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 50%; */
-  /* padding: 40px;
-  width:100vh;
-  border: 1px solid red; */
-/* } */ 
 
-/* .Main-Home-MAin-images{
-  display: flex;
-  width: 100vh;
-  justify-content: center;
-  align-items: center;
-} */
-.Main-Home{
- background: rgb(7, 0, 3);
+.Main-Home {
   background: linear-gradient(
     135deg,
     rgba(7, 0, 3, 1) 46%,
     rgba(16, 16, 22, 1) 56%,
     rgba(57, 70, 63, 1) 81%
   );
-  height: auto;
+  padding: 2rem;
+  min-height: 100vh;
 }
-.card-cards{
-  background-color: white;
-  padding: 10px;
-  border-radius: 25px;
-}
-.Main-Home-image {
-  /* border: 1px solid red; */
-  background-size: cover;
-  height: 130px;
 
+.card-cards {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 250px; /* Adjusted to medium size */
+  height: auto; /* Ensure height is adaptive */
 }
-.Main-Home-image-img{
+
+.card-cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Main-Home-image {
+  background-size: cover;
+  height: 150px; /* Adjusted height */
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.Main-Home-image-img {
   height: 100%;
   width: 100%;
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
+
 .Main-Home-center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
+
 .Main-Home-Left {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  height: 10vh;
+  width: 100%;
 }
+
 .Main-Home-Left-Content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   background-color: white;
-  width: 50vh;
+  padding: 10px 20px;
   border-radius: 12px;
   color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-.cards {
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
+
+.Main-Home-Left-Content div {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
 }
+
+.Main-Home-Left-Content div:hover {
+  color: #ffbe33; /* Amber color on hover */
+}
+
 .Main-Home-Rigth {
-  /* border: 1px solid red; */
-  padding: 80px;
-  justify-content: space-evenly;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
-  gap: 7rem;
-  overflow: auto;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem;
 }
+
 .star-rating {
   color: gold;
+  font-size: 1.2rem;
+}
+
+.location-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.location-link:hover {
+  color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #ffbe33;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e6a50e;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .Main-Home-MAin {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .Main-Home {
+    padding: 1rem;
+  }
+
+  .Main-Home-center {
+    gap: 1rem;
+  }
+
+  .Main-Home-Left {
+    padding: 0;
+  }
+
+  .Main-Home-Left-Content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .Main-Home-Rigth {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card-cards {
+    width: 100%;
+    margin: 0.5rem 0;
+    max-width: 300px; /* Adjusted width for responsiveness */
+  }
+
+  .Main-Home-image {
+    height: 200px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px 0;
+  }
 }
