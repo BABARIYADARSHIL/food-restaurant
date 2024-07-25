@@ -1,0 +1,217 @@
+.Main-Home-MAin {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 75vh;
+  width: 100%;
+  color: white;
+  display: flex;
+}
+
+.Main-Home {
+  background: linear-gradient(
+    135deg,
+    rgba(7, 0, 3, 0.9) 0%,
+    rgba(16, 16, 22, 0.9) 50%,
+    rgba(57, 70, 63, 0.9) 100%
+  );
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+}
+.Main-Home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/white-diamond.png");
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
+}
+.Main-Home > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card-cards {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.card-cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Main-Home-image {
+  background-size: cover;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.Main-Home-image-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Main-Home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Main-Home-Left {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Main-Home-Left-Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.Main-Home-Left-Content div {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.Main-Home-Left-Content div:hover {
+  color: #ffbe33;
+}
+
+.Main-Home-Rigth {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem;
+}
+
+.star-rating {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.location-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.location-link:hover {
+  color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #ffbe33;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e6a50e;
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  transition: color 0.3s;
+}
+
+.card-title:hover {
+  color: #ffbe33;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card-text .location-link {
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card-text .location-link:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .Main-Home-MAin {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .Main-Home {
+    padding: 1rem;
+  }
+
+  .Main-Home-center {
+    gap: 1rem;
+  }
+
+  .Main-Home-Left {
+    padding: 0;
+  }
+
+  .Main-Home-Left-Content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .Main-Home-Rigth {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card-cards {
+    width: 100%;
+    margin: 0.5rem 0;
+    max-width: 300px;
+  }
+
+  .Main-Home-image {
+    height: 200px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px 0;
+  }
+}

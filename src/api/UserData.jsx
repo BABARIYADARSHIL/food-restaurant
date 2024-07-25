@@ -1,6 +1,7 @@
 import axios from "axios";
-import { UserData } from "./Api";
+import { User } from "./Api";
 
-export function UsersData(credentials) {
-  return axios.get(UserData, credentials);
+export function UsersData(email, password) {
+  const responese = axios.post(User, { email, password });
+  return responese;
 }

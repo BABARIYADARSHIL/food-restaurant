@@ -1,4 +1,4 @@
-/* Resetting default styles */
+/* General resets */
 *,
 *::before,
 *::after {
@@ -8,7 +8,6 @@
   list-style-type: none;
 }
 
-/* Root Variables */
 :root {
   --primary-color: #ffbe33;
   --background-color: #f5f5f5;
@@ -18,35 +17,30 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Base Styles */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-}
 
-/* Container for About Us Section */
-.about-us {
+/* Container styles */
+.about-us-section {
   padding: 15rem 1rem;
 }
 
-.about-us-container {
+.about-us-wrapper {
   max-width: 124rem;
   margin: 0 auto;
 }
 
-/* Heading Styles */
-.about-us-heading {
+/* Heading styles */
+.about-us-title {
   font-size: 3.5rem;
   color: var(--heading-color);
   text-align: center;
@@ -54,8 +48,8 @@ body {
   position: relative;
 }
 
-.about-us-heading::after {
-  content: '';
+.about-us-title::after {
+  content: "";
   display: block;
   width: 10%;
   height: 4px;
@@ -64,8 +58,8 @@ body {
   border-radius: 2px;
 }
 
-/* About Us Content Styles */
-.about-us-content {
+/* Content styles */
+.about-us-inner {
   background: var(--card-background);
   padding: 2rem;
   border-radius: 1rem;
@@ -75,57 +69,57 @@ body {
   gap: 2rem;
 }
 
-.about-us-text {
+.about-us-description {
   flex: 1;
   line-height: 1.8;
 }
 
-.about-us-text p {
+.about-us-description p {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
 }
 
-.about-us-image {
+.about-us-photo {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-us-image img {
+.about-us-photo img {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-/* Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
-  .about-us-heading {
+  .about-us-title {
     font-size: 2.8rem;
   }
 
-  .about-us-content {
+  .about-us-inner {
     padding: 1.5rem;
     flex-direction: column;
   }
 
-  .about-us-text p {
+  .about-us-description p {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about-us-heading {
+  .about-us-title {
     font-size: 2.5rem;
   }
 
-  .about-us-content {
+  .about-us-inner {
     padding: 1rem;
   }
 
-  .about-us-text p {
+  .about-us-description p {
     font-size: 1.3rem;
   }
 }

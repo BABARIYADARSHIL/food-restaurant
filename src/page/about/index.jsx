@@ -1,14 +1,14 @@
 import React from "react";
 import "./index.css";
-import teamImage from "../../asset/Image/types-of-snack-food.webp"; // Replace with your image path
+import teamImage from "../../asset/Image/types-of-snack-food.webp";
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
-      <div className="container">
-        <h1 className="about-us-heading">About Us</h1>
-        <div className="about-us-content">
-          <div className="about-us-text">
+    <div className="about-us-section">
+      <div className="about-us-wrapper">
+        <h1 className="about-us-title">About Us</h1>
+        <div className="about-us-inner">
+          <div className="about-us-description">
             <p>
               Welcome to Snackus, your number one source for delicious and
               convenient food ordering. Our mission is to provide you with a
@@ -31,7 +31,7 @@ const AboutUs = () => {
               Thank you for choosing Snackus. We look forward to serving you!
             </p>
           </div>
-          <div className="about-us-image">
+          <div className="about-us-photo">
             <img src={teamImage} alt="Our Team" />
           </div>
         </div>

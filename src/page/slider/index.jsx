@@ -45,24 +45,39 @@ const Slider = () => {
         }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         autoplay={{
-          delay: 1000, // Adjust the delay between slides (in milliseconds)
+          delay: 1000,
           disableOnInteraction: false,
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="swiper_container"
       >
-        {[new1, new2, new3, new4, new5, new6, new7, new8].map(
-          (image, index) => (
-            <SwiperSlide key={index}>
-              <img
-                className="About-img"
-                src={image}
-                alt={`slide_image_${index}`}
-                onClick={() => handleImageClick(image)}
-              />
-            </SwiperSlide>
-          )
-        )}
+        {[
+          new1,
+          new2,
+          new3,
+          new4,
+          new5,
+          new6,
+          new7,
+          new8,
+          new1,
+          new2,
+          new3,
+          new4,
+          new5,
+          new6,
+          new7,
+          new8,
+        ].map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              className="About-img"
+              src={image}
+              alt={`slide_image_${index}`}
+              onClick={() => handleImageClick(image)}
+            />
+          </SwiperSlide>
+        ))}
         <div className="slider-controler">
           <div className="swiper-pagination"></div>
         </div>

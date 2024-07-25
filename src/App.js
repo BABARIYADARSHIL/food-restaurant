@@ -1,9 +1,11 @@
 import React from "react";
-import Routers from "./Routers/Routes";
+import Routers from "./Routers/index";
 
 const App = () => {
   return (
-   <Routers/>
+    <>
+      <Routers />
+    </>
   );
 };
 
