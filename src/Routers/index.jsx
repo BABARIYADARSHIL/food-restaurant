@@ -33,7 +33,6 @@ const Routers = () => {
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {/* {token && <Footer />} */}
       </BrowserRouter>
       <ToastContainer />
     </div>
