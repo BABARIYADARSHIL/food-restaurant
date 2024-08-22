@@ -211,4 +211,4 @@ def get_restaurant():
     return jsonify(result)
 if __name__ == "__main__":
     # app.run(host="127.0.0.32",port=5500)
-    app.run(host="192.168.1.19",port=5500)
+    app.run(host="192.168.1.29",port=5500)
