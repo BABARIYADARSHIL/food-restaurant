@@ -3,11 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./index.module.css";
 import { clearCart } from "../../../store/cart/action";
 import { useNavigate } from "react-router-dom";
-// import { jsPDF } from "jspdf";
-// import html2canvas from "html2canvas";
-//import "jspdf-html2canvas"; // Although this import may not be necessary depending on your usage
-// import "jspdf-autotable";
-
 
 function ConfirmOrder() {
   const dispatch = useDispatch();
@@ -25,34 +20,11 @@ function ConfirmOrder() {
   );
 
   const handelDoneOrder = () => {
-    // generatePDFReceipt();
     setTimeout(() => {
       dispatch(clearCart());
       navigation("/home");
     }, 2000);
   };
-
-  // const generatePDFReceipt = () => {
-  //   const receiptContent = document.querySelector("#receiptContent");
-  //   if (!receiptContent) {
-  //     console.error("Element with ID 'receiptContent' not found");
-  //     return;
-  //   }
-
-  //   html2canvas(receiptContent, { scale: 2 })
-  //     .then((canvas) => {
-  //       const imgData = canvas.toDataURL("image/png");
-  //       const pdf = new jsPDF("p", "mm", "a4");
-  //       const imgProps = pdf.getImageProperties(imgData);
-  //       const pdfWidth = pdf.internal.pageSize.getWidth();
-  //       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-  //       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-  //       pdf.save("receipt.pdf");
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error generating PDF:", error);
-  //     });
-  // };
 
   return (
     <div className={styles.confirmOrderContainer}>
